@@ -70,7 +70,7 @@ class BuscadorEstablecimientos {
 
     async loadProvincias() {
         try {
-            const response = await fetch(`${this.apiBaseUrl}/provincias`);
+            const response = await fetch(`${this.apiBaseUrl}/api/provincias`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -144,7 +144,7 @@ class BuscadorEstablecimientos {
                 params.append('provincia', this.currentProvincia);
             }
 
-            const response = await fetch(`${this.apiBaseUrl}/establecimientos?${params}`);
+            const response = await fetch(`${this.apiBaseUrl}/api/establecimientos?${params}`);
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
