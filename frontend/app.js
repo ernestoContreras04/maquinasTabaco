@@ -5,7 +5,7 @@
 
 class BuscadorEstablecimientos {
     constructor() {
-        this.apiBaseUrl = 'http://localhost:8000/api';
+        this.apiBaseUrl = 'https://maquinastabaco.onrender.com';
         this.currentSkip = 0;
         this.currentLimit = 25;
         this.currentSearch = '';
