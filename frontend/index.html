@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquinas de Tabaco en España - Buscador</title>
+    <meta name="description" content="Busca máquinas de tabaco y establecimientos en España de forma rápida y sencilla">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚬 Máquinas de Tabaco en España</h1>
+            <p class="subtitle">Encuentra establecimientos con máquinas de tabaco cerca de ti</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="search" 
+                        id="searchInput" 
+                        placeholder="Buscar por localidad."
+                        autocomplete="off"
+                    >
+                    <div class="search-icon">🔍</div>
+                </div>
+                
+                <div class="filters-container">
+                    <select id="provinciaSelect">
+                        <option value="">Todas las provincias</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Establecimientos encontrados</h2>
+                    <div class="results-count" id="resultsCount"></div>
+                </div>
+                
+                <div class="loading" id="loadingIndicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Buscando...</span>
+                </div>
+                
+                <div class="results-list" id="listaResultados">
+                    <!-- Los resultados se cargarán aquí dinámicamente -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button id="btnCargarMas" class="load-more-btn" style="display: none;">
+                        Cargar más resultados
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Buscador de Establecimientos España</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
